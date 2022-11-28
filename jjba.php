@@ -17,9 +17,9 @@
         <a href="index.html" class="brand-logo"><img src="source/img/logo.png" alt=""></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="index.php" class="darken 5 purple-text">Accueil</a></li>
-          <li><a href="blue-lock.php" class="darken 5 purple-text">Blue Lock</a></li>
-          <li><a href="black-clover.php" class="darken 5 purple-text">Black Clover</a></li>
+          <li><a href="index.php" class="darken 5 blue-text">Accueil</a></li>
+          <li><a href="blue-lock.php" class="darken 5 blue-text">Blue Lock</a></li>
+          <li><a href="black-clover.php" class="darken 5 blue-text">Black Clover</a></li>
         </ul>
       </div>
     </nav>
@@ -82,7 +82,7 @@
   <div class="parallax-container">
     <div class="parallax"><img src="source/img/second.jpeg" alt="background-header-projet"></div>
   </div>
-  
+
   <div class="characters">
     <h2 class="center-align">Presentation des personnages</h2>
     <div class="row">
