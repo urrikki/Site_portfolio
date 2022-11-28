@@ -6,6 +6,10 @@ body{
     text-transform: uppercase;
 }
 
+.brand-logo img{
+  width: 64px;
+}
+
 h1{
     font-size: 40px;
     color : rgb(0, 81, 255);
@@ -50,9 +54,7 @@ nav{
     padding: 0px 75px;
 }
 
-.brand-logo img{
-  width: 64px;
-}
+
 
 /*contact*/
 body, button, input {
