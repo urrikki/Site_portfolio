@@ -11,3 +11,8 @@
       </div>
     </nav>
   </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#services">Description</a></li>
+    <li><a href="badges.html">Black Clover</a></li>
+    <li><a href="collapsible.html">JoJo's Bizarre Adventure</a></li>
+  </ul>
