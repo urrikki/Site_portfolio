@@ -8,6 +8,7 @@ body{
 
 h1{
     font-size: 40px;
+    margin-bottom: 105px;
     color : rgb(0, 81, 255);
     text-shadow: 0 0 25px rgb(136, 159, 211);
 }
@@ -35,12 +36,16 @@ nav{
 }
 
 .brand-logo img{
-  width: 60px;
+  width: 64px;
 }
 
 /* .parallax-container .parallax img {
     bottom: 75px;
 }  */
+
+.carousel {
+    height: 400px;
+}
 
 .carousel .carousel-item img {
     width: 90%;

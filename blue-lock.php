@@ -17,17 +17,17 @@
         <a href="#!" class="brand-logo"><img src="source/img/logo.png" alt="logo blue lock"></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="index.html" class="darken 5 blue-text">Accueil</a></li>
-          <li><a href="black-clover.html" class="darken 5 blue-text">Black Clover</a></li>
-          <li><a href="jjba.html" class="darken 5 blue-text">JJBA</a></li>
+          <li><a href="index.php" class="darken 5 blue-text">Accueil</a></li>
+          <li><a href="black-clover.php" class="darken 5 blue-text">Black Clover</a></li>
+          <li><a href="jjba.php" class="darken 5 blue-text">JJBA</a></li>
         </ul>
       </div>
     </nav>
   </div>
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="black-clover.html">Black Clover</a></li>
-    <li><a href="jjba.html">JoJo's Bizarre Adventure</a></li>
+    <li><a href="index.php">Accueil</a></li>
+    <li><a href="black-clover.php">Black Clover</a></li>
+    <li><a href="jjba.php">JoJo's Bizarre Adventure</a></li>
   </ul>
   <div class="header">
     <div class="parallax-container">
