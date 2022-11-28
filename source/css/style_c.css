@@ -43,8 +43,8 @@ nav{
     bottom: 75px;
 }  */
 
-.carousel {
-    height: 400px;
+.carousel{
+    height : 400px !important;
 }
 
 .carousel .carousel-item img {
@@ -52,6 +52,7 @@ nav{
     height: 90%;
     border: 3px solid cyan;
     border-radius: 14px;
+    margin-bottom: 50px;
 } 
 
 .card{

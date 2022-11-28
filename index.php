@@ -106,7 +106,7 @@
       </div>
     </div>
     
-    <div class="cont center-align" id="scroll3">
+    <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
 

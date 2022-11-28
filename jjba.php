@@ -11,24 +11,8 @@
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper black">
-        <a href="index.html" class="brand-logo"><img src="source/img/logo.png" alt=""></a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.php" class="darken 5 blue-text">Accueil</a></li>
-          <li><a href="blue-lock.php" class="darken 5 blue-text">Blue Lock</a></li>
-          <li><a href="black-clover.php" class="darken 5 blue-text">Black Clover</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="index.php">Accueil</a></li>
-    <li><a href="blue-lock.php">Blue Lock</a></li>
-    <li><a href="black-clover.php">Black Clover</a></li>
-  </ul>
+<?php require "components/menu.php"; ?>
+
   <div class="header">
     <div class="parallax-container">
       <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
