@@ -31,7 +31,7 @@
   </ul>
   <div class="header">
     <div class="parallax-container">
-      <div class="parallax"><img src="source/img/bl1.jpg" alt="Wallpaper Anime"></div>
+      <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
     </div>
     <h1 class="center-align">Présentation de l'anime Blue lock</h1>
   </div>
@@ -74,6 +74,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="source/img/second.jpeg" alt="background-header-projet"></div>
   </div>
 
   <!--cards-->

@@ -31,7 +31,7 @@
   </ul>
   <div class="header">
     <div class="parallax-container">
-      <div class="parallax"><img src="source/img/headerjjba.jpg" alt="Wallpaper Anime"></div>
+      <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
     </div>
     <h1 class="center-align">Présentation de l'anime Jojo's Bizarre Adventure</h1>
   </div>
@@ -78,6 +78,11 @@
       </div>
     </div>
   </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="source/img/second.jpeg" alt="background-header-projet"></div>
+  </div>
+  
   <div class="characters">
     <h2 class="center-align">Presentation des personnages</h2>
     <div class="row">
