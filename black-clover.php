@@ -17,9 +17,9 @@
         <a href="#!" class="brand-logo"><img src="source/img/logo.png" alt=""></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="index.php" class="darken 4 red-text">Accueil</a></li>
-          <li><a href="blue-lock.php" class="darken 4 red-text">Blue Lock</a></li>
-          <li><a href="jjba.php" class="darken 4 red-text">JJBA</a></li>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="blue-lock.php">Blue Lock</a></li>
+          <li><a href="jjba.php">JJBA</a></li>
         </ul>
       </div>
     </nav>
