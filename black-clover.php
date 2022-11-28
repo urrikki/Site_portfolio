@@ -37,7 +37,7 @@
     </div>
     <h1 class="center-align">Présentation de l'anime Black Clover</h1>
   </div>
-  <div class=" container carousel carousel-slider center" style="height : 400px;">
+  <div class=" container carousel carousel-slider center">
     <div class="carousel-item" href="#one!">
       <div class="row">
         <div class="col s12 m12 l5 offset-l1">

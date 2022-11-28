@@ -43,8 +43,8 @@ nav{
     bottom: 75px;
 }  */
 
-.carousel .element.style{
-    height : 400px;
+.carousel{
+    height : 400px !important;
 }
 
 .carousel .carousel-item img {
