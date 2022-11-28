@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require_once "config.php"; ?>
+<?php require_once "cfg/config.php"; ?>
 <html>
 
 <head>
