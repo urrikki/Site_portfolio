@@ -50,6 +50,10 @@ nav{
     padding: 0px 75px;
 }
 
+.brand-logo img{
+  width: 64px;
+}
+
 /*contact*/
 body, button, input {
     font-family: 'Montserrat', sans-serif;
