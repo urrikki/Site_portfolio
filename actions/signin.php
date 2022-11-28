@@ -1,5 +1,5 @@
 <?php 
-require_once "/..cfg/config.php"; 
+require_once "../cfg/config.php"; 
 $sql = "SELECT * FROM user WHERE username='".$_POST['username']."' AND password='".$_POST['password']."'"; 
 $pre = $pdo->prepare($sql); 
 $pre->execute();
