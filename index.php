@@ -46,7 +46,7 @@
           <p>Merci de visiter notre site.</p>
         </div>
         <div id="gabriel" class="col s12">
-          <p>Gabriel</p>
+          <p>NANG NDONG Gabriel</p>
           <p>Bonjour,je suis étudiant à gaming campus et ce site est le projet numéro 2.</p>
           <p>Merci de visiter notre site.</p>
         </div>
@@ -60,7 +60,7 @@
 
   <!--formulaire d'animé-->
   <div class="formulaire-d'animé container">
-    <h2 class="center-align" id="scroll2">Formulaire d'animé</h2>
+    <h2 class="center-align" id="scroll2"> Formulaire d'animé</h2>
     <div class="row">
       <div class="col s12 m7 l3">
         <h3>Blue lock</h3>
