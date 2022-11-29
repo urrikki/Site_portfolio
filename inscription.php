@@ -17,7 +17,7 @@
 <?php require "components/menu.php"; ?>
 
     <h1> Se Connecter</h1>
-    <form method="post" action="login.php">
+    <form method="post" action="actions/signin.php">
         <input type='text' name='username' />
         <input type='password' name='password' />
         <input type='submit' value='Me connecter' />
