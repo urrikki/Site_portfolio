@@ -13,8 +13,7 @@
    
    foreach($data as $user){ ?>
    <div class="bloc_user">
-     <h2><?php echo $user['first_name']." ".$user['last_name'] ?></h2>
-     <span class="email"><?php echo $user['email'] ?></span>
+     <h2><?php echo $user['email']." ".$user['username'] ?></h2>
    </div>
    <?php } ?>
   </body>
