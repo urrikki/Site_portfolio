@@ -1,13 +1,13 @@
 <?php 
-require_once "config.php"; 
-$sql = "INSERT INTO user(email,password,login) VALUES(:email,:password,:login)";
+require_once "../cfg/config.php"; 
+$sql = "INSERT INTO user(email ,username ,password) VALUES(:email,:username, :password)";
 $dataBinded=array(
     ':email'   => $_POST['email'],
+    ':username'   => $_POST['username'],
     ':password'=> $_POST['password'],
-    ':login'=> $_POST['login']
 );
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-header('Location:index.php');//on le redirige sur la page d'accueil du site !
+header('Location:../index.php');//on le redirige sur la page d'accueil du site !
 ?>
