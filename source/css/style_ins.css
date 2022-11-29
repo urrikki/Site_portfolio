@@ -200,3 +200,9 @@ nav{
   .app-form-button:hover {
     color: cyan;
   }
+
+  .submit img{
+    width: 30%;
+    margin-left: 1266px;
+    margin-top: -345px;
+  }
