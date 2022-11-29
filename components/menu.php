@@ -15,5 +15,5 @@
   <ul class="sidenav" id="mobile-demo">
         <li><a href="index.php" class="darken 5 blue-text">Accueil</a></li>
         <li><a href="index.php.#scroll3" class="darken 5 blue-text">Contact</a></li>
-        <li><a href="jjba.php" class="darken 5 blue-text">Se Connecter</a></li>
+        <li><a href="inscription.php" class="darken 5 blue-text">Se Connecter</a></li>
   </ul>
