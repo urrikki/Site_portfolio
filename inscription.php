@@ -16,12 +16,39 @@
 
 <?php require "components/menu.php"; ?>
 
-<form method="post" action="actions/signup.php">
-    <input type='email' name='email' />
-    <input type='username' name='username' />
-    <input type='password' name='password' />
-    <input type='submit' value="M'inscrire" />
-</form>
+<div class="header">
+    <div class="parallax-container">
+        <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
+    </div>
+    <h1 class="center-align">S'inscrire</h1>
+</div>
+
+<div class="submit ">
+    <form method="post" action="actions/signup.php">
+    <div class="screen-body">
+            <div class="screen-body-item">
+                <div class="app-form">
+                    <div class="app-form-group">
+                        <input class="app-form-control" type='email' name='email' placeholder="email" />
+                    </div>
+                    <div class="app-form-group">
+                        <input class="app-form-control" type='text' name='username' placeholder="pseudo" />
+                    </div>
+                    <div class="app-form-group">
+                        <input class="app-form-control" type='password' name='password' placeholder="mot de passe" />
+                    </div>
+                    <div class="app-form-group buttons">
+                        <button class="app-form-button"> <input type='submit' value="M'inscrire" /> </button>
+                    </div>
+                </div>
+            </div> 
+    </div>          
+    </form>
+</div>
+
+<div class="parallax-container">
+    <div class="parallax"><img src="source/img/second.jpeg" alt="background-header-projet"></div>
+</div>
 
 </body>
 </html>
