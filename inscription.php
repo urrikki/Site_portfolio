@@ -16,12 +16,24 @@
 
 <?php require "components/menu.php"; ?>
 
-<form method="post" action="actions/signup.php">
-    <input type='email' name='email' />
-    <input type='username' name='username' />
-    <input type='password' name='password' />
-    <input type='submit' value="M'inscrire" />
-</form>
-
+    <h1> Se Connecter</h1>
+    <form method="post" action="login.php">
+        <input type='text' name='username' />
+        <input type='password' name='password' />
+        <input type='submit' value='Me connecter' />
+    </form>
+    <h2>S'inscrire</h2>
+    
+    <form method="post" action="actions/signup.php">
+        <input type='email' name='email' />
+        <input type='text' name='username' />
+        <input type='password' name='password' />
+        <input type='submit' value="M'inscrire" />
+    </form>
+    
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="source/js/jquery.min.js"></script>
+    <script type="text/javascript" src="source/js/materialize.min.js"></script>
+    <script type="text/javascript" src="source/js/script.js"></script>
 </body>
 </html>
