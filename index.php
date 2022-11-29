@@ -46,7 +46,7 @@
           <p>Merci de visiter notre site.</p>
         </div>
         <div id="gabriel" class="col s12">
-          <p>Gabriel</p>
+          <p>NANG NDONG Gabriel</p>
           <p>Bonjour,je suis étudiant à gaming campus et ce site est le projet numéro 2.</p>
           <p>Merci de visiter notre site.</p>
         </div>

@@ -1,5 +1,6 @@
 <?php
-  if( isset($_GET['logout']) && $_GET['logout'] == 1 ) {
-    session_destroy();
-  }
+session_start();
+unset($_SESSION["id"]);
+unset($_SESSION["name"]);
+header("Location:login.php");
 ?>
