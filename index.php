@@ -60,7 +60,7 @@
 
   <!--formulaire d'animé-->
   <div class="formulaire-d'animé container">
-    <h2 class="center-align" id="scroll2">Formulaire d'animé</h2>
+    <h2 class="center-align" id="scroll2"> Formulaire d'animé</h2>
     <div class="row">
       <div class="col s12 m7 l3">
         <h3>Blue lock</h3>
