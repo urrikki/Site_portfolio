@@ -156,3 +156,12 @@
 </body>
 
 </html>
+
+<form method="POST">
+  <input type="text" name="preTitre" placeholder="Nom de l'anime">
+</form>
+
+<form method="post">
+  <input type="text" name="titre1" placeholder="Nom de l'anime">
+  <textarea name="text1" placeholder="Ecrire ici"></textaraea>
+</form>
