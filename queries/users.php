@@ -27,7 +27,7 @@
             
             foreach($data as $user){ ?>
             <div class="bloc_user">
-                <h2><?php echo $user['email']." ".$user['username']." ".$user['admin']?></h2>
+                <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
             </div>
         <?php } ?>
     </body>
