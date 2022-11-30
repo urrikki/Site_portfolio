@@ -1,3 +1,4 @@
+
 <?php 
 require_once "../cfg/config.php"; 
 $sql = "SELECT * FROM user WHERE username='".$_POST['username']."' AND password=SHA1('".$_POST['SHA1(password)']."')";
