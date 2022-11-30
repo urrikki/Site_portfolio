@@ -1,3 +1,4 @@
+
 <?php 
 require_once "../cfg/config.php"; 
 $sql = "SELECT * FROM user WHERE username= :username AND password=SHA1(:password)";
