@@ -1,9 +1,13 @@
 
 <?php 
 require_once "../cfg/config.php"; 
-$sql = "SELECT * FROM user WHERE username='".$_POST['username']."' AND password=SHA1('".$_POST['SHA1(password)']."')";
+$sql = "SELECT * FROM user WHERE username= :username AND password=SHA1(:password)";
+$dataBinded=array(
+     ':username'   => $_POST['username'],
+     ':password'=> "564#(''#5645616519651654965464'')".$_POST['password'],
+);
 $pre = $pdo->prepare($sql); 
-$pre->execute();
+$pre->execute($dataBinded);
 $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){
      echo "Utilisateur ou mot de passe incorrect !";
