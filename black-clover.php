@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once "cfg/config.php"; ?>
 <html lang="fr" dir="ltr">
 
 <head>
