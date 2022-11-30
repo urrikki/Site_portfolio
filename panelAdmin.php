@@ -1,3 +1,10 @@
+<?php
+if(isset($_SESSION['user']) && $user['admin'] == 1 ){
+    echo "Bonjour ".$_SESSION['user']['first_name'];
+}else{
+    echo "Vous n'êtes pas connecté";
+}
+?>
 <!DOCTYPE html>
 <?php require_once "cfg/config.php"; ?>
 <html>
@@ -13,7 +20,25 @@
 </head>
 
 <body>
+  <?php require "components/menu.php"; ?>
 
+  <div class="header">
+      <div class="parallax-container">
+          <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
+      </div>
+      <h1>Liste des utilisateurs</h1>
+  </div>
+  <?php
+      $sql = "SELECT * FROM user"; 
+      $pre = $pdo->prepare($sql); 
+      $pre->execute();
+      $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+      
+      foreach($data as $user){ ?>
+      <div class="bloc_user">
+          <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
+      </div>
+  <?php } ?>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="source/js/jquery.min.js"></script>
     <script type="text/javascript" src="source/js/materialize.min.js"></script>
