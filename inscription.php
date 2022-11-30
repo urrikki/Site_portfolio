@@ -20,65 +20,69 @@
         <div class="parallax-container">
             <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
         </div>
-        <h1 class="center-align">S'inscrire</h1>
+        <?php if(isset($_SESSION['user'])){?>
+            <h1 class="center-align">S'inscrire</h1>
+        <?php }else{?>
+            <h1 class="center-align">Se connecter</h1>
+        <?php }?>
     </div>
 
+    <form method="post" action="actions/signin.php">
+    <div class="screen-body">
+        <div class="screen-body-item">
+            <div class="app-form">
+                <div class="app-form-group">
+                    <input class="app-form-control" type='text' name='username' placeholder="pseudo" />
+                </div>
+                <div class="app-form-group">
+                    <input class="app-form-control" type='password' name='password' placeholder="mot de passe" />
+                </div>
+                <div class="app-form-group buttons">
+                    <button type="submit" class="btn app-form-button">Connexion</button>
+                </div>
+            </div>
+        </div> 
+    </div>          
+    </form>
+<img src="source/img/rin.png" class="sub" alt="">
+        
+<div class="header">
+    <div class="parallax-container">
+        <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
+    </div>
+    <h1 class="center-align">S'inscrire</h1>
+</div>
 
-    <?php if(isset($_SESSION['user'])){?>
+<form method="post" action="actions/signup.php">
+    <div class="screen-body">
+        <div class="screen-body-item">
+            <div class="app-form">
+                <div class="app-form-group">
+                    <input class="app-form-control" type='email' name='email' placeholder="email" />
+                </div>
+                <div class="app-form-group">
+                    <input class="app-form-control" type='text' name='username' placeholder="pseudo" />
+                </div>
+                <div class="app-form-group">
+                    <input class="app-form-control" type='password' name='password' placeholder="mot de passe" />
+                </div>
+                <div class="app-form-group buttons">
+                    <button type="submit" class="btn app-form-button"> inscrire </button>  
+                </div>
+            </div>
+        </div> 
+    </div>          
+    </form>
+<img src="source/img/rin.png" class="sub" alt="">
+    
         
-            <form method="post" action="actions/signup.php">
-            <div class="screen-body">
-                <div class="screen-body-item">
-                    <div class="app-form">
-                        <div class="app-form-group">
-                            <input class="app-form-control" type='email' name='email' placeholder="email" />
-                        </div>
-                        <div class="app-form-group">
-                            <input class="app-form-control" type='text' name='username' placeholder="pseudo" />
-                        </div>
-                        <div class="app-form-group">
-                            <input class="app-form-control" type='password' name='password' placeholder="mot de passe" />
-                        </div>
-                        <div class="app-form-group buttons">
-                            <button type="submit" class="btn app-form-button"> inscrire </button>
-                        </div>
-                    </div>
-                </div> 
-            </div>          
-            </form>
-        <img src="source/img/rin.png" class="sub" alt="">
-        
-    <?php }else{?>
-        
-            <form method="post" action="actions/signin.php">
-            <div class="screen-body">
-                <div class="screen-body-item">
-                    <div class="app-form">
-                        <div class="app-form-group">
-                            <input class="app-form-control" type='text' name='username' placeholder="pseudo" />
-                        </div>
-                        <div class="app-form-group">
-                            <input class="app-form-control" type='password' name='password' placeholder="mot de passe" />
-                        </div>
-                        <div class="app-form-group buttons">
-                            <button type="submit" class="btn app-form-button">Connexion</button>
-                        </div>
-                    </div>
-                </div> 
-            </div>          
-            </form>
-        <img src="source/img/rin.png" class="sub" alt="">
-        
-    <?php }?>
 
 
 
 
 
     
-    <div class="parallax-container">
-        <div class="parallax"><img src="source/img/second.jpeg" alt="background-header-projet"></div>
-    </div>
+    
     
 
 

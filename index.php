@@ -108,38 +108,40 @@
     
     <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
+      <?php if($user['admin']==0){ ?>
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
 
-      <!-- Modal Structure -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <!--contact-->
-          <!--https://codepen.io/krisantuswanandi/pen/KxrgeZ-->
-          <div class="screen-body">
-            <div class="screen-body-item">
-              <div class="app-form">
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="NOM">
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="EMAIL">
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="NUMERO">
-                </div>
-                <div class="app-form-group message">
-                  <input class="app-form-control" placeholder="MESSAGE">
-                </div>
-                <div class="app-form-group buttons">
-                  <button class="app-form-button">ANNULER</button>
-                  <button class="app-form-button">ENVOYER</button>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <!--contact-->
+            <!--https://codepen.io/krisantuswanandi/pen/KxrgeZ-->
+            <div class="screen-body">
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NOM">
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="EMAIL">
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NUMERO">
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE">
+                  </div>
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button">ANNULER</button>
+                    <button class="app-form-button">ENVOYER</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <?php } ?>
 
 
 
