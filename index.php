@@ -102,7 +102,7 @@
           crainte et le mépris des autres villageois, qui, avec le temps, ne font plus de différence entre Kyûbi et
           Naruto</p>
         <img class="cover" src="source/img/naruto.jpg" alt="anime-blue-lock-cover">
-        <a class="waves-effect waves-light btn">En savoir plus</a>
+        <a class="waves-effect waves-light btn" href="projetNV.php">En savoir plus</a>
       </div>
     </div>
     
@@ -110,7 +110,9 @@
       <!-- Modal Trigger -->
       <?php if($user['admin']==0){ ?>
         <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
-
+      <?php }else{ ?>
+        <a class="waves-effect waves-light btn modal-trigger" href="paneldmin.php">Panel</a>
+      <?php } ?>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
@@ -141,7 +143,7 @@
           </div>
         </div>
       </div>
-      <?php } ?>
+      
 
 
 

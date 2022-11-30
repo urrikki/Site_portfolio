@@ -6,7 +6,12 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="index.php" class="darken 5 blue-text">Accueil</a></li>
           <li><a href="index.php.#scroll3" class="darken 5 blue-text">Contact</a></li>
-          <li><a href="inscription.php" class="darken 5 blue-text">Se Connecter</a></li>
+          <?php if(isset($_SESSION['user'])){?>
+            <li><a href="inscription.php" class="darken 5 blue-text">Se Deconnecter</a></li>
+          <?php }else{ ?>
+            <li><a href="inscription.php" class="darken 5 blue-text">Se Connecter</a></li>
+          <?php } ?>
+          
         </ul>
       </div>
     </nav>
