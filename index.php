@@ -14,7 +14,11 @@
 
 <body>
 
-<?php require "components/menu.php"; ?>
+<?php require "components/menu.php"; 
+if(isset($_SESSION['user'])){
+  echo "Bonjour ".$_SESSION['user']['username'];
+}else{
+}?>
   
   <div class="header">
     <div class="parallax-container">
@@ -106,42 +110,61 @@
       </div>
     </div>
     
+    <div class="row">
+      <div class="col s12 m7 l3">
+        <form method="post">
+        <input type="text" placeholder="titre" />
+        </form>
+        <textarea placeholder="ecrire"></textarea>
+        <form method="post" action="upload.php" enctype="multipart/form-data">
+            <input type='file' name='image'>
+        </form>
+        <a type="submit" class="waves-effect waves-light btn" >Créer</a>
+      </div>
+    </div>
+
     <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
-      <?php if($user['admin']==0){ ?>
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
-      <?php }else{ ?>
-        <a class="waves-effect waves-light btn modal-trigger" href="paneldmin.php">Panel</a>
-      <?php } ?>
+      <?php
+        if(isset($_SESSION['user']) && ($_SESSION['user']['admin'] == 1 )){
+      ?>
+          <a class="waves-effect waves-light btn modal-trigger" href="panelAdmin.php">Panel</a>
+        <?php } else {?>
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
+        <?php }?>
         <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <!--contact-->
-            <!--https://codepen.io/krisantuswanandi/pen/KxrgeZ-->
-            <div class="screen-body">
-              <div class="screen-body-item">
-                <div class="app-form">
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="NOM">
-                  </div>
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="EMAIL">
-                  </div>
-                  <div class="app-form-group">
-                    <input class="app-form-control" placeholder="NUMERO">
-                  </div>
-                  <div class="app-form-group message">
-                    <input class="app-form-control" placeholder="MESSAGE">
-                  </div>
-                  <div class="app-form-group buttons">
-                    <button class="app-form-button">ANNULER</button>
-                    <button class="app-form-button">ENVOYER</button>
+        
+        <form action="actions/mail.php" method="post">
+
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <!--contact-->
+              <!--https://codepen.io/krisantuswanandi/pen/KxrgeZ-->
+              <div class="screen-body">
+                <div class="screen-body-item">
+                  <div class="app-form">
+                    <div class="app-form-group">
+                      <input class="app-form-control" placeholder="NOM" type="text" name="name">
+                    </div>
+                    <div class="app-form-group">
+                      <input class="app-form-control" placeholder="EMAIL" type="text" name="email">
+                    </div>
+                    <div class="app-form-group">
+                      <input class="app-form-control" placeholder="Objet" type="text" name="objet">
+                    </div>
+                    <div class="app-form-group message">
+                      <input class="app-form-control" placeholder="MESSAGE" type="textarea" name="content">
+                    </div>
+                    <div class="app-form-group buttons">
+                      <button class="app-form-button">ANNULER</button>
+                      <button class="app-form-button">ENVOYER</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
       
 
@@ -154,14 +177,4 @@
     <script type="text/javascript" src="source/js/script.js"></script>
 
 </body>
-
 </html>
-
-<form method="POST">
-  <input type="text" name="preTitre" placeholder="Nom de l'anime">
-</form>
-
-<form method="post">
-  <input type="text" name="titre1" placeholder="Nom de l'anime">
-  <textarea name="text1" placeholder="Ecrire ici"></textaraea>
-</form>

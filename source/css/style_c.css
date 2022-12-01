@@ -80,12 +80,19 @@ input[type=submit] {
     width: 90%;
     background-color: rgb(0, 81, 255);
     color: cyan;
-    padding: 14px 20px;
+    padding: 20px 20px;
     margin-left: 98px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    color : cyan;
+    text-shadow: 0 0 25px #d6f5ff;
+    text-transform: uppercase;
+}
 
 
 

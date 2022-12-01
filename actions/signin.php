@@ -9,13 +9,14 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql); 
 $pre->execute($dataBinded);
 $user = $pre->fetch(PDO::FETCH_ASSOC);
-if(empty($user)){
+if(empty($user)){ //vérifie si le resultat est vide !
+     //non connecté
      echo "Utilisateur ou mot de passe incorrect !";
 }else{
-     $_SESSION['user'] = $user; 
+     $_SESSION['user'] = $user; //on enregistre que l'utilisateur est connecté
+}
      
      header('Location:../index.php');
-}
 ?>
 
 

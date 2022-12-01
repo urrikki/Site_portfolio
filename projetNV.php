@@ -3,7 +3,7 @@
 <html lang="fr" dir="ltr">
 
 <head>
-  <title>Blue Lock</title>
+  <title>Projet</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="source/css/materialize.css" />
   <link type="text/css" rel="stylesheet" href="source/css/style_c.css" />
@@ -20,7 +20,7 @@
     </div>
 
     <form method="post">
-      <h1 class="center-align">Présentation de l'anime <input type="text" placeholder="Nom de l'anime" class="c"/></h1>
+      <h1 class="center-align">Présentation de l'anime <input type="text" placeholder="Nom de l'anime"/></h1>
     </form>            
   </div>
   <div class=" container carousel carousel-slider center">

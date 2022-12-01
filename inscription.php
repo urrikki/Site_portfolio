@@ -68,7 +68,7 @@
             </div>
         </div> 
     </div>          
-    </form>
+</form>
 <img src="source/img/rin.png" class="sub" alt="">
     
         

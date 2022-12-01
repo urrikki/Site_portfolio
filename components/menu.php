@@ -11,7 +11,6 @@
           <?php }else{ ?>
             <li><a href="inscription.php" class="darken 5 blue-text">Se Connecter</a></li>
           <?php } ?>
-          
         </ul>
       </div>
     </nav>
@@ -21,6 +20,5 @@
         <li><a href="index.php" class="darken 5 blue-text">Accueil</a></li>
         <li><a href="index.php.#scroll3" class="darken 5 blue-text">Contact</a></li>
         <li><a href="inscription.php" class="darken 5 blue-text">Se Connecter</a></li>
-        <li><a href="queries/users.php" class="darken 5 blue-text">Liste d'utilisateur</a></li>
         <li><a href="panelAdmin.php" class="darken 5 blue-text">Panel d'administration</a></li>
   </ul>
