@@ -28,6 +28,7 @@
       </div>
       <h1>Liste des utilisateurs</h1>
   </div>
+  
   <?php
       $sql = "SELECT * FROM user"; 
       $pre = $pdo->prepare($sql); 
@@ -39,42 +40,27 @@
           <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
       </div>
   <?php } ?>
-
-  <?php
-    if (isset($_POST['animeName'],$_POST['title1'],$_POST['text1'],,$_POST['cardTitle1'],$_POST['cardText1'],)){
-      if (!empty($_POST['animeName']) AND !empty($_POST['title1'])  AND !empty($_POST['text1'])  AND !empty($_POST['cardTitle1']) AND !empty($_POST['cardText1']) ){
-        
-      }else{
-        $error = 'Veuillez tous remplir';
-      }
-    }
-  ?>
   
   <h2 class="color white"> Cree projet </h2>
 
   <p>Nom anime</p>
   <p> -----------------------------------------------------------------------------------------------------------------------------</p>
-    <input type="text" name="title1" placeholder="titre" />
-  <form method="post" <form method="post" action="upload.php" enctype="multipart/form-data">
-    <input type="text" name="title1" placeholder="titre" />
-  <p> Carousel 1</p>
-  <p> -----------------------------------------------------------------------------------------------------------------------------</p>
+  <form method="post" action="actions/add-projet.php" action="actions/upload.php" enctype="multipart/form-data">
+    <input type="text" name="animeName" placeholder="titre" />
+    
     <input type="text" name="title1" placeholder="titre" />
     <textarea name="text1" placeholder="ecrire"></textarea>
   
-    <input type='file' name='image'>
-
-  <p> Personnage 1</p>
-  <p> -----------------------------------------------------------------------------------------------------------------------------</p>
+    <input type='file' name='image1'>
   
     <input type="text" name="cardTitle1" placeholder="titre" />
     <textarea name="cardText1" placeholder="ecrire"></textarea>
 
     <input type='file' name='cardImage1'>
 
-  <input type="submit" value="creer" />
+    <input type="submit" value="creer" />
   </form>
-  <?php if(isset($error)) {echo $error;} ?>
+  
 
 
     <!--JavaScript at end of body for optimized loading-->
