@@ -1,12 +1,5 @@
-<?php
-if(isset($_SESSION['user']) && $user['admin'] == 1 ){
-    echo "Bonjour ".$_SESSION['user']['first_name'];
-}else{
-    echo "Vous n'êtes pas connecté";
-}
-?>
+<?php require_once "cfg/config.php";?>
 <!DOCTYPE html>
-<?php require_once "cfg/config.php"; ?>
 <html>
 
 <head>
@@ -20,7 +13,14 @@ if(isset($_SESSION['user']) && $user['admin'] == 1 ){
 </head>
 
 <body>
-  <?php require "components/menu.php"; ?>
+  <?php require "components/menu.php";
+    if(isset($_SESSION['user']['admin']) ){
+    echo "Bonjour ".$_SESSION['user']['username'];
+    }else{
+    header('Location:index.php');
+    exit();
+    }
+    ?>
 
   <div class="header">
       <div class="parallax-container">
