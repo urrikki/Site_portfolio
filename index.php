@@ -108,7 +108,7 @@
     
     <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
-      <?php if($user['admin']==0){ ?>
+      
         <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
 
         <!-- Modal Structure -->
@@ -141,7 +141,7 @@
           </div>
         </div>
       </div>
-      <?php } ?>
+      
 
 
 
