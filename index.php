@@ -14,7 +14,11 @@
 
 <body>
 
-<?php require "components/menu.php"; ?>
+<?php require "components/menu.php"; 
+if(isset($_SESSION['user'])){
+  echo "Bonjour ".$_SESSION['user']['username'];
+}else{
+}?>
   
   <div class="header">
     <div class="parallax-container">
