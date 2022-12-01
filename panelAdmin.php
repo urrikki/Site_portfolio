@@ -25,11 +25,9 @@
   <div class="header">
       <div class="parallax-container">
           <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
-        </div>
-        <h1>List Projet</h1>
-
-        <h1>Liste des utilisateurs</h1>
       </div>
+      <h1>Liste des utilisateurs</h1>
+  </div>
   <?php
       $sql = "SELECT * FROM user"; 
       $pre = $pdo->prepare($sql); 
@@ -41,7 +39,6 @@
           <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
       </div>
   <?php } ?>
-
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="source/js/jquery.min.js"></script>
     <script type="text/javascript" src="source/js/materialize.min.js"></script>

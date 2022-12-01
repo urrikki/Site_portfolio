@@ -87,6 +87,13 @@ input[type=submit] {
     cursor: pointer;
   }
 
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    color : cyan;
+    text-shadow: 0 0 25px #d6f5ff;
+    text-transform: uppercase;
+}
+
 
 
 
