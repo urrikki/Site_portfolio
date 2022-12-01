@@ -19,7 +19,7 @@ if(isset($_SESSION['user'])){
   echo "Bonjour ".$_SESSION['user']['username'];
 }else{
 }?>
-  
+
   <div class="header">
     <div class="parallax-container">
       <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
