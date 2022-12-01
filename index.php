@@ -106,13 +106,25 @@
       </div>
     </div>
     
+    <div class="row">
+      <div class="col s12 m7 l3">
+        <form method="post">
+        <input type="text" placeholder="titre" />
+        </form>
+        <textarea placeholder="ecrire"></textarea>
+        <form method="post" action="upload.php" enctype="multipart/form-data">
+            <input type='file' name='image'>
+        </form>
+        <a type="submit" class="waves-effect waves-light btn" >Créer</a>
+      </div>
+    </div>
+
     <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
       
+
         <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
-      <?php }else{ ?>
-        <a class="waves-effect waves-light btn modal-trigger" href="paneldmin.php">Panel</a>
-      <?php } ?>
+        <a class="waves-effect waves-light btn modal-trigger" href="panelAdmin.php">Panel</a>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
@@ -154,14 +166,4 @@
     <script type="text/javascript" src="source/js/script.js"></script>
 
 </body>
-
 </html>
-
-<form method="POST">
-  <input type="text" name="preTitre" placeholder="Nom de l'anime">
-</form>
-
-<form method="post">
-  <input type="text" name="titre1" placeholder="Nom de l'anime">
-  <textarea name="text1" placeholder="Ecrire ici"></textaraea>
-</form>

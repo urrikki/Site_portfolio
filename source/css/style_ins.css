@@ -35,6 +35,10 @@ nav{
     z-index: 999;
 }
 
+.black{
+  background-color: #07252d !important;
+}
+
 .brand-logo img{
   width: 64px;
 }
