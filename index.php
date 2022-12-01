@@ -118,7 +118,7 @@ if(isset($_SESSION['user'])){
     $pre->execute(); //on l'execute
     $data = $pre->fetchAll(PDO::FETCH_ASSOC);
     foreach ($data as $acceuil) {
-      if ($acceuil['idAcceuil'] == 5) {
+      if ($acceuil['idAcceuil'] == 2) {
     ?>
     
     
@@ -132,7 +132,7 @@ if(isset($_SESSION['user'])){
               <p><input class = "textarea-admin" type='textarea' name="texte" value = "<?php echo $acceuil['texte'] ?>" /></p>
               <img class="cover" src="<?php echo $acceuil['img1']; ?>">
               <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
-              <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+              <a class="waves-effect waves-light btn" href="projet.php?id=8">En savoir plus</a>
             </form> 
           </div>
           <form method="post" action="actions/destroy-projet.php">
@@ -165,7 +165,7 @@ if(isset($_SESSION['user'])){
               <p><input class = "textarea-admin" type='textarea' name="texte" value = "<?php echo $acceuil['texte'] ?>" /></p>
               <img class="cover" src="<?php echo $acceuil['img1']; ?>">
               <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
-              <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+              <a class="waves-effect waves-light btn" href="projet.php?id=11">En savoir plus</a>
             </form> 
           </div>
           <form method="post" action="actions/destroy-projet.php">
@@ -197,7 +197,7 @@ if(isset($_SESSION['user'])){
               <p><input class = "textarea-admin" type='textarea' name="texte" value = "<?php echo $acceuil['texte'] ?>" /></p>
               <img class="cover" src="<?php echo $acceuil['img1']; ?>">
               <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
-              <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+              <a class="waves-effect waves-light btn" href="projet.php?id=12">En savoir plus</a>
             </form> 
           </div>
           <form method="post" action="actions/destroy-projet.php">
