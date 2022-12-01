@@ -19,7 +19,7 @@ if(isset($_SESSION['user'])){
   echo "Bonjour ".$_SESSION['user']['username'];
 }else{
 }?>
-
+  
   <div class="header">
     <div class="parallax-container">
       <div class="parallax"><img src="source/img/header.jpeg" alt="background-header-projet"></div>
@@ -106,7 +106,7 @@ if(isset($_SESSION['user'])){
           crainte et le mépris des autres villageois, qui, avec le temps, ne font plus de différence entre Kyûbi et
           Naruto</p>
         <img class="cover" src="source/img/naruto.jpg" alt="anime-blue-lock-cover">
-        <a class="waves-effect waves-light btn" href="projetNV.php">En savoir plus</a>
+        <a class="waves-effect waves-light btn" href="">En savoir plus</a>
       </div>
     </div>
     
@@ -126,7 +126,7 @@ if(isset($_SESSION['user'])){
           <h2><?php echo $acceuil['h2']; ?></h2>
             <p><?php echo $acceuil['texte']; ?></p>
             <img class="cover" src="<?php echo $acceuil['img1']; ?>">
-            <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+            <a class="waves-effect waves-light btn" href="projet.php?id=8">En savoir plus</a>
         </div>
 
         <?php
@@ -140,7 +140,7 @@ if(isset($_SESSION['user'])){
           <h2><?php echo $acceuil['h2']; ?></h2>
             <p><?php echo $acceuil['texte']; ?></p>
             <img class="cover" src="<?php echo $acceuil['img1']; ?>">
-            <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+            <a class="waves-effect waves-light btn" href="projet.php?id=11">En savoir plus</a>
         </div>
 
         <?php
@@ -154,7 +154,7 @@ if(isset($_SESSION['user'])){
           <h2><?php echo $acceuil['h2']; ?></h2>
             <p><?php echo $acceuil['texte']; ?></p>
             <img class="cover" src="<?php echo $acceuil['img1']; ?>">
-            <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+            <a class="waves-effect waves-light btn" href="projet.php?id=12">En savoir plus</a>
         </div>
         <?php
         }
