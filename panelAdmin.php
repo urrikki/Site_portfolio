@@ -37,8 +37,30 @@
       
       foreach($data as $user){ ?>
       <div class="bloc_user">
-          <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
+        <p>
+          <?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?>
+        </p>
       </div>
+      <div class="btn-user-display">
+
+          <form method="post" action="actions/updateUsername.php">
+              <input class = "textarea-admin" type='textarea' name="username" value = "<?php echo $user['username'] ?>" />
+              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
+              <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
+          </form>
+
+          <form method="post" action="actions/admin.php">
+              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
+              <input type='hidden' name="admin" value = "<?php echo $user['admin']==1?0:1 ?>" />
+              <button class="btn-adminpanel black-text-css" type="submit">Admin</button>
+          </form>
+
+          <form method="post" action="actions/destroy-user.php">
+              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
+              <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
+          </form>
+
+        </div>
   <?php } ?>
   
   <h2 class="color white"> Crée projet </h2>
