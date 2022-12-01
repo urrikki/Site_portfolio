@@ -118,16 +118,35 @@ if(isset($_SESSION['user'])){
     $pre->execute(); //on l'execute
     $data = $pre->fetchAll(PDO::FETCH_ASSOC);
     foreach ($data as $acceuil) {
-      if ($acceuil['idAcceuil'] == 2) {
+      if ($acceuil['idAcceuil'] == 5) {
     ?>
     
     
         <div class="col s12 m7 l3">
+        <?php
+        if(isset($_SESSION['user']) && ($_SESSION['user']['admin'] == 1 )){
+      ?>
+        <form method="post" action="actions/updateTxt.php">
+              <input type='hidden' name="id" value = "<?php echo $acceuil['idAcceuil'] ?>" />
+              <h2><?php echo $acceuil['h2']; ?></h2>
+              <p><input class = "textarea-admin" type='textarea' name="texte" value = "<?php echo $acceuil['texte'] ?>" /></p>
+              <img class="cover" src="<?php echo $acceuil['img1']; ?>">
+              <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
+              <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+            </form> 
+          </div>
+          <form method="post" action="actions/destroy-projet.php">
+            <input type='hidden' name="id" value = "<?php echo $acceuil['idAcceuil'] ?>" />
+            <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
+          </form>
+          <?php } else { ?>
+            <div class="col s12 m7 l3">
           <h2><?php echo $acceuil['h2']; ?></h2>
             <p><?php echo $acceuil['texte']; ?></p>
             <img class="cover" src="<?php echo $acceuil['img1']; ?>">
             <a class="waves-effect waves-light btn" href="projet.php?id=8">En savoir plus</a>
         </div>
+        <?php } ?>
 
         <?php
         }
@@ -137,12 +156,30 @@ if(isset($_SESSION['user'])){
         if ($acceuil['idAcceuil'] == 3) {
       ?>
         <div class="col s12 m7 l3">
+        <?php
+        if(isset($_SESSION['user']) && ($_SESSION['user']['admin'] == 1 )){
+      ?>
+        <form method="post" action="actions/updateTxt.php">
+              <input type='hidden' name="id" value = "<?php echo $acceuil['idAcceuil'] ?>" />
+              <h2><?php echo $acceuil['h2']; ?></h2>
+              <p><input class = "textarea-admin" type='textarea' name="texte" value = "<?php echo $acceuil['texte'] ?>" /></p>
+              <img class="cover" src="<?php echo $acceuil['img1']; ?>">
+              <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
+              <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+            </form> 
+          </div>
+          <form method="post" action="actions/destroy-projet.php">
+            <input type='hidden' name="id" value = "<?php echo $acceuil['idAcceuil'] ?>" />
+            <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
+          </form>
+          <?php } else { ?>
+            <div class="col s12 m7 l3">
           <h2><?php echo $acceuil['h2']; ?></h2>
             <p><?php echo $acceuil['texte']; ?></p>
             <img class="cover" src="<?php echo $acceuil['img1']; ?>">
             <a class="waves-effect waves-light btn" href="projet.php?id=11">En savoir plus</a>
         </div>
-
+        <?php } ?>
         <?php
         }
         ?>
@@ -151,11 +188,30 @@ if(isset($_SESSION['user'])){
         if ($acceuil['idAcceuil'] == 4){
       ?>
         <div class="col s12 m7 l3">
+        <?php
+        if(isset($_SESSION['user']) && ($_SESSION['user']['admin'] == 1 )){
+      ?>
+        <form method="post" action="actions/updateTxt.php">
+              <input type='hidden' name="id" value = "<?php echo $acceuil['idAcceuil'] ?>" />
+              <h2><?php echo $acceuil['h2']; ?></h2>
+              <p><input class = "textarea-admin" type='textarea' name="texte" value = "<?php echo $acceuil['texte'] ?>" /></p>
+              <img class="cover" src="<?php echo $acceuil['img1']; ?>">
+              <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
+              <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+            </form> 
+          </div>
+          <form method="post" action="actions/destroy-projet.php">
+            <input type='hidden' name="id" value = "<?php echo $acceuil['idAcceuil'] ?>" />
+            <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
+          </form>
+          <?php } else { ?>
+            <div class="col s12 m7 l3">
           <h2><?php echo $acceuil['h2']; ?></h2>
             <p><?php echo $acceuil['texte']; ?></p>
             <img class="cover" src="<?php echo $acceuil['img1']; ?>">
             <a class="waves-effect waves-light btn" href="projet.php?id=12">En savoir plus</a>
         </div>
+        <?php } ?>
         <?php
         }
     }
