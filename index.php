@@ -110,18 +110,57 @@ if(isset($_SESSION['user'])){
       </div>
     </div>
     
-    <div class="row">
-      <div class="col s12 m7 l3">
-        <form method="post">
-        <input type="text" placeholder="titre" />
-        </form>
-        <textarea placeholder="ecrire"></textarea>
-        <form method="post" action="upload.php" enctype="multipart/form-data">
-            <input type='file' name='image'>
-        </form>
-        <a type="submit" class="waves-effect waves-light btn" >Créer</a>
-      </div>
-    </div>
+    <?php 
+    require "components/menu.php"; 
+    require_once "actions/database.php";
+    $sql = "SELECT * FROM acceuil";
+    $pre = $pdo->prepare($sql); //on prévient la base de données qu'on va executer une requête
+    $pre->execute(); //on l'execute
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($data as $acceuil) {
+      if ($acceuil['idAcceuil'] == 2) {
+    ?>
+    
+    
+        <div class="col s12 m7 l3">
+          <h2><?php echo $acceuil['h2']; ?></h2>
+            <p><?php echo $acceuil['texte']; ?></p>
+            <img class="cover" src="<?php echo $acceuil['img1']; ?>">
+            <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+        </div>
+
+        <?php
+        }
+        ?>
+
+      <?php
+        if ($acceuil['idAcceuil'] == 3) {
+      ?>
+        <div class="col s12 m7 l3">
+          <h2><?php echo $acceuil['h2']; ?></h2>
+            <p><?php echo $acceuil['texte']; ?></p>
+            <img class="cover" src="<?php echo $acceuil['img1']; ?>">
+            <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+        </div>
+
+        <?php
+        }
+        ?>
+
+      <?php
+        if ($acceuil['idAcceuil'] == 4){
+      ?>
+        <div class="col s12 m7 l3">
+          <h2><?php echo $acceuil['h2']; ?></h2>
+            <p><?php echo $acceuil['texte']; ?></p>
+            <img class="cover" src="<?php echo $acceuil['img1']; ?>">
+            <a class="waves-effect waves-light btn" href="projet.php">En savoir plus</a>
+        </div>
+        <?php
+        }
+    }
+    ?>
+
 
     <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
@@ -129,9 +168,9 @@ if(isset($_SESSION['user'])){
         if(isset($_SESSION['user']) && ($_SESSION['user']['admin'] == 1 )){
       ?>
           <a class="waves-effect waves-light btn modal-trigger" href="panelAdmin.php">Panel</a>
-        <?php } else {?>
+        <?php } else { ?>
           <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
-        <?php }?>
+        <?php } ?>
         <!-- Modal Structure -->
         
         <form action="actions/mail.php" method="post">

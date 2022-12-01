@@ -45,18 +45,34 @@
 
   <p>Nom anime</p>
   <p> -----------------------------------------------------------------------------------------------------------------------------</p>
-  <form method="post" action="actions/add-projet.php" action="actions/upload.php" enctype="multipart/form-data">
+  <form method="post" action="actions/add-projet.php" enctype="multipart/form-data">
     <input type="text" name="animeName" placeholder="titre" />
+
+    <br></br>
     
     <input type="text" name="title1" placeholder="titre" />
     <textarea name="text1" placeholder="ecrire"></textarea>
   
     <input type='file' name='image1'>
-  
+    
+    <br></br>
     <input type="text" name="cardTitle1" placeholder="titre" />
     <textarea name="cardText1" placeholder="ecrire"></textarea>
 
     <input type='file' name='cardImage1'>
+
+    <input type="submit" value="creer" />
+  </form>
+
+  <h2 class="color white"> Crée acceuil </h2>
+
+  <p>Nom anime</p>
+  <p> -----------------------------------------------------------------------------------------------------------------------------</p>
+  <form method="post" action="actions/add-acceuil.php" enctype="multipart/form-data">
+    <input type="text" name="h2" placeholder="titre" />
+    <textarea name="texte" placeholder="ecrire"></textarea>
+  
+    <input type='file' name='img1'>
 
     <input type="submit" value="creer" />
   </form>
