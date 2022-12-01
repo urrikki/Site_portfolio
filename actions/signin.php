@@ -10,7 +10,7 @@ $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){
-     $_SESSION('error')
+     $_SESSION('error');
 }else{
      $_SESSION['user'] = $user; 
      
