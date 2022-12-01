@@ -35,8 +35,10 @@
       $data = $pre->fetchAll(PDO::FETCH_ASSOC);
       
       foreach($data as $user){ ?>
-          <?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");} ?>
-  <div class="btn-user-display">
+      <p>
+        <?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":""); ?>
+      </p>
+        <div class="btn-user-display">
 
           <form method="post" action="actions/updateUsername.php">
               <input class = "textarea-admin" type='textarea' name="username" value = "<?php echo $user['username'] ?>" />
@@ -56,22 +58,9 @@
           </form>
 
         </div>
-      <div class="bloc_user">
-          <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
-      </div>
-  <?php } ?>
-
-  <?php
-    if (isset($_POST['animeName'],$_POST['title1'],$_POST['text1'],,$_POST['cardTitle1'],$_POST['cardText1'],)){
-      if (!empty($_POST['animeName']) AND !empty($_POST['title1'])  AND !empty($_POST['text1'])  AND !empty($_POST['cardTitle1']) AND !empty($_POST['cardText1']) ){
-        
-      }else{
-        $error = 'Veuillez tous remplir';
-      }
-    }
-  ?>
+        <?php }?>
   
-  <h2 class="color white"> Cree projet </h2>
+  <h2 class="color white"> Crée projet </h2>
 
   <p>Nom anime</p>
   <p> -----------------------------------------------------------------------------------------------------------------------------</p>
