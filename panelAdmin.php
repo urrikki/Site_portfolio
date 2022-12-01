@@ -28,6 +28,7 @@
       </div>
       <h1>Liste des utilisateurs</h1>
   </div>
+  
   <?php
       $sql = "SELECT * FROM user"; 
       $pre = $pdo->prepare($sql); 
@@ -35,56 +36,31 @@
       $data = $pre->fetchAll(PDO::FETCH_ASSOC);
       
       foreach($data as $user){ ?>
-      <p>
-        <?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":""); ?>
-      </p>
-        <div class="btn-user-display">
-
-          <form method="post" action="actions/updateUsername.php">
-              <input class = "textarea-admin" type='textarea' name="username" value = "<?php echo $user['username'] ?>" />
-              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
-              <button class="btn-adminpanel black-text-css" type="submit">Modifier</button>
-          </form>
-
-          <form method="post" action="actions/admin.php">
-              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
-              <input type='hidden' name="admin" value = "<?php echo $user['admin']==1?0:1 ?>" />
-              <button class="btn-adminpanel black-text-css" type="submit">Admin</button>
-          </form>
-
-          <form method="post" action="actions/destroy-user.php">
-              <input type='hidden' name="id" value = "<?php echo $user['id'] ?>" />
-              <button class="btn-adminpanel black-text-css" type="submit"><span class="material-icons admin-icon">delete</span></button>
-          </form>
-
-        </div>
-        <?php }?>
+      <div class="bloc_user">
+          <h2><?php echo $user['email']." ".$user['username'] .($user['admin'] == 1?" - Admin":"");?></h2>
+      </div>
+  <?php } ?>
   
   <h2 class="color white"> Crée projet </h2>
 
   <p>Nom anime</p>
   <p> -----------------------------------------------------------------------------------------------------------------------------</p>
-    <input type="text" name="title1" placeholder="titre" />
-  <form method="post" <form method="post" action="upload.php" enctype="multipart/form-data">
-    <input type="text" name="title1" placeholder="titre" />
-  <p> Carousel 1</p>
-  <p> -----------------------------------------------------------------------------------------------------------------------------</p>
+  <form method="post" action="actions/add-projet.php" action="actions/upload.php" enctype="multipart/form-data">
+    <input type="text" name="animeName" placeholder="titre" />
+    
     <input type="text" name="title1" placeholder="titre" />
     <textarea name="text1" placeholder="ecrire"></textarea>
   
-    <input type='file' name='image'>
-
-  <p> Personnage 1</p>
-  <p> -----------------------------------------------------------------------------------------------------------------------------</p>
+    <input type='file' name='image1'>
   
     <input type="text" name="cardTitle1" placeholder="titre" />
     <textarea name="cardText1" placeholder="ecrire"></textarea>
 
     <input type='file' name='cardImage1'>
 
-  <input type="submit" value="creer" />
+    <input type="submit" value="creer" />
   </form>
-  <?php if(isset($error)) {echo $error;} ?>
+  
 
 
     <!--JavaScript at end of body for optimized loading-->
