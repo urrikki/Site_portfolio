@@ -110,12 +110,7 @@
         </div>
       </div>
       <div class="offset-m2 col s12 m8 l4 offset-m2">
-        <div class="card">
-          <div class="card-image">
-            <form method="post" action="upload_file.php" enctype="multipart/form-data">
-              <input type='file' name='image'>
-            </form>
-          </div>
+        
           <div class="card-content black">
             <form method="post">
               <span class="card-title"><input type="text" placeholder="Nom du personnage" /></span>
