@@ -121,10 +121,13 @@
 
     <div class="cont center-align" style="margin-top : 250px;" id="scroll3" >
       <!-- Modal Trigger -->
-      
-
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
-        <a class="waves-effect waves-light btn modal-trigger" href="panelAdmin.php">Panel</a>
+      <?php
+        if(isset($_SESSION['user']) && ($_SESSION['user']['admin'] == 1 )){
+      ?>
+          <a class="waves-effect waves-light btn modal-trigger" href="paneldmin.php">Panel</a>
+        <?php } else {?>
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
+        <?php }?>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
